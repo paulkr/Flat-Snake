@@ -1,0 +1,44 @@
+<!DOCTYPE html5>
+<!--
+Flat Snake
+Paul Krishnamurthy 2015
+www.PaulKr.com
+-->
+<html>
+	<head>
+		<title>Flat Snake</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Paul Krishnamurthy">
+		<link rel="stylesheet" type="text/css" href="style/index.css">
+		<script src="js/jquery.js"></script>
+		<script type='text/javascript' src="js/index.js"></script>
+	</head>
+
+	<body>
+
+		<div id="start">
+			<h1 class="title">Welcome to Flat Snake</h1>
+			<h1 class="instructions"><i>Enter your name to begin</i></h1>
+
+			<form id="info">
+				<input type="text" id="name" maxlength="15" placeholder="Your name" >
+				<br />
+				<input type="submit" id="submit" value="Enter">
+			</form>
+
+		</div>
+
+		<div id="death">
+			<h1 class="deathTitle">You died<span >...</span> Try again?</h1>
+			<br />
+			<button id="playAgain">Play Again</button>
+		</div>
+
+		<div id="game">
+			<h1 id="score"></h1>
+			<h1 id="flatSnake"></h1>
+			<canvas id="canvas" width="500" height="500"></canvas>
+		</div>
+
+	</body>
+</html>
