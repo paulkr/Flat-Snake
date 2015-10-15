@@ -88,13 +88,13 @@ $(document).ready(function(){
 	function move(){
 		// Move snake based on direction
 
-		if (direction == "right"){
+		if (direction == "right") {
 			tx ++;
-		} else if (direction == "left"){
+		} else if (direction == "left") {
 			tx --;
-		} else if (direction == "up"){
+		} else if (direction == "up") {
 			ty --;
-		} else {
+		} else if (direction == "down") {
 			ty ++;
 		}
 	}
@@ -171,7 +171,6 @@ $(document).ready(function(){
 
 		// Check for boundary and collision death
 		checkDeath();
-		console.log(snakeCells[0].x, WIDTH/15)
 
 		// Check food collision
 		checkFood();
@@ -196,14 +195,14 @@ $(document).ready(function(){
 		var key = event.which;
 
 		// Check ASCII characters (arrows and ASWD)
-		// Disable snake being allowed to move backwards
-		if (key == 37 || key == 65 && direction != "right"){
+		// Snake cannot go in opposite direction
+		if ((key == 37 || key == 65) && direction !== "right"){
 			direction = "left";
-		} else if (key == 38 || key == 87 && direction != "down"){
+		} else if ((key == 38 || key == 87) && direction !== "down"){
 			direction = "up";
-		} else if (key == 39 || key == 68 && direction != "left"){
+		} else if ((key == 39 || key == 68) && direction !== "left"){
 			direction = "right";
-		} else if (key == 40 || key == 83 && direction != "up"){
+		} else if ((key == 40 || key == 83) && direction !== "up"){
 			direction = "down";
 		}
 
